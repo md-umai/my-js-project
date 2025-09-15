@@ -2,40 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My JavaScript Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #f0f2f5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px;
+            font-family: 'Inter', sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
         }
-        h1 {
-            color: #333;
-        }
-        .project {
-            background: white;
-            padding: 20px 40px;
-            margin: 10px;
-            border-radius: 10px;
+        header {
+            background: #4f46e5;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 50px 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 250px;
+            text-align: center;
+            padding: 30px 20px;
             text-decoration: none;
             color: #333;
-            font-size: 18px;
-            transition: 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .project:hover {
-            background: #e0e0e0;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .card h2 {
+            margin: 0 0 15px;
+            font-size: 1.5rem;
+            color: #4f46e5;
+        }
+        .card p {
+            margin: 0;
+            font-size: 1rem;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #f4f6f8;
+            color: #555;
         }
     </style>
 </head>
 <body>
-    <h1>My JavaScript Projects</h1>
+    <header>
+        <h1>My JavaScript Projects</h1>
+    </header>
 
-    <a class="project" href="color-changer/project.html" target="_blank">🎨 Color Changer</a>
-    <a class="project" href="list-search/index.html" target="_blank">🔍 List & Search</a>
+    <main>
+        <a class="card" href="color-changer/project.html" target="_blank">
+            <h2>🎨 Color Changer</h2>
+            <p>Change colors dynamically with JavaScript.</p>
+        </a>
 
+        <a class="card" href="list-search/index.html" target="_blank">
+            <h2>🔍 List & Search</h2>
+            <p>Search and filter through a list of items.</p>
+        </a>
+    </main>
+
+    <footer>
+        &copy; 2025 My JavaScript Projects
+    </footer>
 </body>
 </html>
+
