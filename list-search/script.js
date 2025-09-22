@@ -17,13 +17,13 @@ const arr = [
         profileUrl:'https://www.apetogentleman.com/wp-content/uploads/2018/06/top-male-models.jpg" alt="User Image',
         name:'Ziad Shaik',
         email:'ziadshaik@gmail.com'
-    }
+    },
 
     {
         profileUrl:'https://www.apetogentleman.com/wp-content/uploads/2018/06/top-male-models.jpg" alt="User Image',
         name:'Khaja Hamza',
         email:'hamza@gmail.com'
-    }
+    },
 
 
     {
@@ -62,7 +62,7 @@ function handleSearch(e){
     let filteruser = arr.filter(obj=>{
         // console.log(obj.name.includes(searchValue));
         return (obj.name.toLowerCase().includes(searchValue.toLowerCase()));
-        return obj.email.toLowerCase().includes(searchValue.toLowerCase());
+        return (obj.email.toLowerCase().includes(searchValue.toLowerCase()));
     })
     renderUsers(filteruser);
     

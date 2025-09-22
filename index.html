@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -84,5 +84,171 @@
         &copy; 2025 My JavaScript Projects
     </footer>
 </body>
-</html>
+</html> -->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Umair | JavaScript Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background: #f4f6f8;
+            color: #333;
+        }
+        header {
+            background: #4f46e5;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #c7d2fe;
+        }
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s;
+            opacity: 0;
+        }
+        .card.show {
+            opacity: 1;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .card h2 {
+            margin: 0 0 15px;
+            color: #4f46e5;
+            font-size: 1.5rem;
+        }
+        .card p {
+            margin: 0;
+            color: #555;
+        }
+        section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #4f46e5;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f4f6f8;
+            color: #555;
+            margin-top: 40px;
+        }
+        a:hover {
+    color: #7c3aed;
+    text-decoration: underline;
+}
+
+        @media (max-width: 500px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mohammed Umair</h1>
+    <p>JavaScript Developer & Enthusiast</p>
+    <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<main id="projects">
+    <!-- Project Cards -->
+    <a class="card" href="color-changer/project.html" target="_blank">
+        <h2>🎨 Color Changer</h2>
+        <p>Change colors dynamically with JavaScript.</p>
+    </a>
+
+    <a class="card" href="list-search/index.html" target="_blank">
+        <h2>🔍 List & Search</h2>
+        <p>Search and filter through a list of items.</p>
+    </a>
+</main>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I am <strong>Mohammed Umair</strong>, a passionate JavaScript developer building interactive web projects and learning continuously. This portfolio showcases some of my work.</p>
+</section>
+<section id="contact" style="max-width: 600px; margin: 40px auto; padding: 0 20px; text-align: center;">
+    <h2>Contact Me</h2>
+    <p>If you want to get in touch, feel free to email me or visit my GitHub profile.</p>
+    <p>
+        📧 <a href="mailto:mdumairuk1@gmail.com" style="color:#4f46e5; text-decoration:none;">mdumairuk1@gmail.com</a><br>
+        💻 <a href="https://github.com/md-umai" target="_blank" style="color:#4f46e5; text-decoration:none;">github.com/md-umai</a>
+    </p>
+</section>
+
+<footer>
+    &copy; 2025 Mohammed Umair
+</footer>
+
+<script>
+    // Fade-in animation for project cards
+    const cards = document.querySelectorAll('.card');
+    window.addEventListener('load', () => {
+        cards.forEach((card, index) => {
+            setTimeout(() => {
+                card.classList.add('show');
+            }, index * 200); // delay each card
+        });
+    });
+</script>
+
+</body>
+</html>
